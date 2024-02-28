@@ -1,3 +1,5 @@
+import random
+
 class WordMakerHuman():
     def __init__(self, words_file, debug):
         self.debug = debug
@@ -12,23 +14,27 @@ class WordMakerHuman():
         # allow player #1 to provide a word for player #2 to guess
         # we want to be fair, so make sure the word provided has the same number of characters as the `word_length` variable
         # the word selected should be preserved in the `word` property of the instance
+        self.word = input("Player #1, provide a word for Player #2 to guess:").lower().strip()
 
-        pass # TODO: implement this
+        while len(self.word) != word_length:
+            print(f"The word provided must have {word_length} characters.")
+            self.word = input("Please provide a word with the corect number of charaters").lower().strip()
 
     def getValidWord(self):
         # what should we return here?
-        pass # TODO: implement this
-
+        valid_word = random.choice(list(self.words.keys()))
+        return valid_word
+    
     def getAmountOfValidWords(self):
         # what should we return here?
-        pass # TODO: implement this
+        return len(self.words)
 
     def guess(self, guess_letter):
         # find how many instances of the `guess_letter` parameter occur in the word
         # return a list of one or more index positions where the letter matches
         # i.e. the word ELSE should return [0, 3] when the guess_letter is e
-
-        pass # TODO: implement this
+        positions = [i for i, letter in enumerate(self.word) if letter == guess_letter]
+        return positions
 
 class WordMakerAI():    
     """
