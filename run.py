@@ -2,7 +2,7 @@ import game_manager as GM
 
 # ------SETTINGS------
 # should the words be provided by a human or selected by the computer?
-ai = False
+ai = True
 
 # if computer-generated, what difficulty level should it play at?
 difficulty = input("What level of difficulty? (Debug, Easy, Hard) ")
@@ -19,7 +19,7 @@ debug = True
 
 # ------BEGIN GAME------
 # create a new instance of GameManager using the appropriate settings above
-my_game = GM(ai, words, num_guesses, debug)
+my_game = GM.GameManager(ai, words, num_guesses, debug)
 
 # run the control_loop() function of the new game
 my_game.control_loop()
