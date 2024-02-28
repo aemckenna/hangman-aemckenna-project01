@@ -21,12 +21,12 @@ class WordMakerHuman():
             self.word = input("Please provide a word with the corect number of charaters").lower().strip()
 
     def getValidWord(self):
-        # what should we return here?
+        # Returning a randomly selected word
         valid_word = random.choice(list(self.words.keys()))
         return valid_word
     
     def getAmountOfValidWords(self):
-        # what should we return here?
+        # Returning the length of the words
         return len(self.words)
 
     def guess(self, guess_letter):
