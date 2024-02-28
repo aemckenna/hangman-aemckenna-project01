@@ -19,7 +19,7 @@ debug = True
 
 # ------BEGIN GAME------
 # create a new instance of GameManager using the appropriate settings above
-pass # TODO: implement this
+my_game = GM(ai, words, num_guesses, debug)
 
 # run the control_loop() function of the new game
-pass # TODO: implement this
+my_game.control_loop()

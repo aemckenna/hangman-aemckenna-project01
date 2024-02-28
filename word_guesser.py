@@ -30,14 +30,15 @@ class WordGuesserHuman():
 
     def reset(self, word_length):
         # update the state property of the instance to reflect a new GameState 
-        pass # TODO: implement this
-
+        self.state = GameState(guesses=, word_length=, debug=)
     def getGuess(self):
         # prompt the user to provide a new character to guess
+        input("Guess a new character")
         #   --confirm that there is only 1 character
         #   --confirm that the character is a letter (not a digit, symbol, etc.)
         #   --confirm that the character has not be previously guess
             
         #   this function should return that single character
+        return character
         pass # TODO: implement this
  
