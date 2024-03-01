@@ -21,7 +21,7 @@ class WordMakerHuman():
             self.word = input("Please provide a word with the corect number of charaters").lower().strip()
 
     def getValidWord(self):
-        # Returning a randomly selected word
+        # Returning word
         return self.word
     
     def getAmountOfValidWords(self):
