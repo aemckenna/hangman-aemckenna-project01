@@ -22,8 +22,7 @@ class WordMakerHuman():
 
     def getValidWord(self):
         # Returning a randomly selected word
-        valid_word = random.choice(list(self.words.keys()))
-        return valid_word
+        return self.word
     
     def getAmountOfValidWords(self):
         # Returning the length of the words
